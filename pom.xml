@@ -9,11 +9,20 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+
+        <courses-core-lib.version>1.0-SNAPSHOT</courses-core-lib.version>
 
         <lombok.version>1.18.16</lombok.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.github.sankowskiwojciech</groupId>
+            <artifactId>courses-core-lib</artifactId>
+            <version>${courses-core-lib.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
