@@ -19,4 +19,8 @@ public class SubdomainEntityStub {
         subdomainUserAccessEntities.add(SubdomainUserAccessEntityStub.create(SUBDOMAIN_ALIAS_STUB, TUTOR_EMAIL_ADDRESS_STUB));
         return new SubdomainEntity(SUBDOMAIN_ALIAS_STUB, SubdomainType.ORGANIZATION, subdomainUserAccessEntities);
     }
+
+    public static SubdomainEntity create(String subdomainId, SubdomainType subdomainType, Set<SubdomainUserAccessEntity> subdomainUserAccessEntities) {
+        return new SubdomainEntity(subdomainId, subdomainType, subdomainUserAccessEntities);
+    }
 }
