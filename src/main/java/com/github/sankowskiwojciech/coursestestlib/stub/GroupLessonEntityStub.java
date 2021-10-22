@@ -1,6 +1,9 @@
 package com.github.sankowskiwojciech.coursestestlib.stub;
 
+import com.github.sankowskiwojciech.coursescorelib.model.db.group.GroupEntity;
 import com.github.sankowskiwojciech.coursescorelib.model.db.grouplesson.GroupLessonEntity;
+import com.github.sankowskiwojciech.coursescorelib.model.db.subdomain.SubdomainEntity;
+import com.github.sankowskiwojciech.coursescorelib.model.db.tutor.TutorEntity;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +18,14 @@ public class GroupLessonEntityStub {
         final GroupLessonEntity entity = create();
         entity.setStartDate(startDate);
         entity.setEndDate(endDate);
+        return entity;
+    }
+
+    public static GroupLessonEntity createWithExternalEntities(SubdomainEntity subdomainEntity, TutorEntity tutorEntity, GroupEntity groupEntity) {
+        final GroupLessonEntity entity = create();
+        entity.setSubdomainEntity(subdomainEntity);
+        entity.setTutorEntity(tutorEntity);
+        entity.setGroupEntity(groupEntity);
         return entity;
     }
 
