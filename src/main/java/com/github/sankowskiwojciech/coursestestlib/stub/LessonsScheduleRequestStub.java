@@ -13,7 +13,6 @@ import java.util.List;
 
 import static com.github.sankowskiwojciech.coursestestlib.DefaultTestValues.ORGANIZATION_EMAIL_ADDRESS_STUB;
 import static com.github.sankowskiwojciech.coursestestlib.DefaultTestValues.STUDENT_EMAIL_ADDRESS_STUB;
-import static com.github.sankowskiwojciech.coursestestlib.DefaultTestValues.TUTOR_EMAIL_ADDRESS_STUB;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class LessonsScheduleRequestStub {
@@ -21,6 +20,6 @@ public class LessonsScheduleRequestStub {
     public static LessonsScheduleRequest createWithScheduleTypeFixedDatesLessons(LocalDate beginningDate, LocalDate endDate) {
         final DayOfWeekWithTimes dayOfWeekWithTimes = DayOfWeekWithTimesStub.createValid();
         final List<DayOfWeekWithTimes> lessonsDaysOfWeekWithTimes = Arrays.asList(dayOfWeekWithTimes);
-        return new IndividualLessonsScheduleRequest(beginningDate, endDate, ScheduleType.FIXED_DATES_LESSONS, null, lessonsDaysOfWeekWithTimes, null, ORGANIZATION_EMAIL_ADDRESS_STUB, TUTOR_EMAIL_ADDRESS_STUB, STUDENT_EMAIL_ADDRESS_STUB);
+        return new IndividualLessonsScheduleRequest(beginningDate, endDate, ScheduleType.FIXED_DATES_LESSONS, null, lessonsDaysOfWeekWithTimes, null, ORGANIZATION_EMAIL_ADDRESS_STUB, STUDENT_EMAIL_ADDRESS_STUB);
     }
 }
