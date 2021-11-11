@@ -27,4 +27,9 @@ public class IndividualLessonRequestStub {
         final LocalDateTime currentDateTime = LocalDateTime.now();
         return new IndividualLessonRequest(LESSON_TITLE_STUB, currentDateTime, currentDateTime.plusHours(2), LESSON_DESCRIPTION_STUB, SUBDOMAIN_ALIAS_STUB, FILES_IDS_STUB, STUDENT_EMAIL_ADDRESS_STUB);
     }
+
+    public static IndividualLessonRequest createWithStudentId(String studentId) {
+        final LocalDateTime currentDateTime = LocalDateTime.now();
+        return new IndividualLessonRequest(LESSON_TITLE_STUB, currentDateTime, currentDateTime.plusHours(2), LESSON_DESCRIPTION_STUB, SUBDOMAIN_ALIAS_STUB, FILES_IDS_STUB, studentId);
+    }
 }

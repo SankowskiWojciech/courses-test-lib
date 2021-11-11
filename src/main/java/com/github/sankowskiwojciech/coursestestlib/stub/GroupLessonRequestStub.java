@@ -32,4 +32,9 @@ public class GroupLessonRequestStub {
         final LocalDateTime currentDateTime = LocalDateTime.now();
         return new GroupLessonRequest(LESSON_TITLE_STUB, currentDateTime, currentDateTime.plusHours(2), LESSON_DESCRIPTION_STUB, SUBDOMAIN_ALIAS_STUB, FILES_IDS_STUB, GROUP_ID_STUB);
     }
+
+    public static GroupLessonRequest createWithGroupId(String groupId) {
+        final LocalDateTime currentDateTime = LocalDateTime.now();
+        return new GroupLessonRequest(LESSON_TITLE_STUB, currentDateTime, currentDateTime.plusHours(2), LESSON_DESCRIPTION_STUB, SUBDOMAIN_ALIAS_STUB, FILES_IDS_STUB, groupId);
+    }
 }
