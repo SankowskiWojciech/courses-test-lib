@@ -26,6 +26,10 @@ public class GroupLessonsScheduleRequestStub {
         return new GroupLessonsScheduleRequest(LocalDate.now(), null, ScheduleType.FIXED_DURATION_LESSONS, allLessonsDurationInMinutes, lessonsDaysOfWeekWithTimes, null, ORGANIZATION_EMAIL_ADDRESS_STUB, GROUP_ID_STUB);
     }
 
+    public static GroupLessonsScheduleRequest createWithGroupId(String groupId) {
+        return new GroupLessonsScheduleRequest(LocalDate.now(), null, ScheduleType.ONE_YEAR_LENGTH_LESSONS, null, Arrays.asList(DayOfWeekWithTimesStub.createValid()), null, ORGANIZATION_EMAIL_ADDRESS_STUB, groupId);
+    }
+
     public static GroupLessonsScheduleRequest createWithScheduleTypeFixedDatesLessons(LocalDate beginningDate, LocalDate endDate) {
         final DayOfWeekWithTimes dayOfWeekWithTimes = DayOfWeekWithTimesStub.createValid();
         final List<DayOfWeekWithTimes> lessonsDaysOfWeekWithTimes = Arrays.asList(dayOfWeekWithTimes);

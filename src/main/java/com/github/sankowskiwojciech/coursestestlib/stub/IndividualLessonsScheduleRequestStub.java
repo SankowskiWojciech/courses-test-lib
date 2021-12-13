@@ -20,6 +20,10 @@ public class IndividualLessonsScheduleRequestStub {
         return new IndividualLessonsScheduleRequest(LocalDate.now(), null, ScheduleType.ONE_YEAR_LENGTH_LESSONS, null, lessonsDaysOfWeekWithTimes, null, ORGANIZATION_EMAIL_ADDRESS_STUB, STUDENT_EMAIL_ADDRESS_STUB);
     }
 
+    public static IndividualLessonsScheduleRequest createWithStudentId(String studentId) {
+        return new IndividualLessonsScheduleRequest(LocalDate.now(), null, ScheduleType.ONE_YEAR_LENGTH_LESSONS, null, Arrays.asList(DayOfWeekWithTimesStub.createValid()), null, ORGANIZATION_EMAIL_ADDRESS_STUB, studentId);
+    }
+
     public static IndividualLessonsScheduleRequest createWithScheduleTypeFixedDurationLessons(Long allLessonsDurationInMinutes) {
         final DayOfWeekWithTimes dayOfWeekWithTimes = DayOfWeekWithTimesStub.createValid();
         final List<DayOfWeekWithTimes> lessonsDaysOfWeekWithTimes = Arrays.asList(dayOfWeekWithTimes);
