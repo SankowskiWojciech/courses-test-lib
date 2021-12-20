@@ -23,4 +23,10 @@ public class SubdomainEntityStub {
     public static SubdomainEntity create(String subdomainId, SubdomainType subdomainType, Set<SubdomainUserAccessEntity> subdomainUserAccessEntities) {
         return new SubdomainEntity(subdomainId, subdomainType, subdomainUserAccessEntities);
     }
+
+    public static SubdomainEntity createWithSubdomainId(String subdomainId) {
+        Set<SubdomainUserAccessEntity> subdomainUserAccessEntities = new HashSet<>();
+        subdomainUserAccessEntities.add(SubdomainUserAccessEntityStub.create(SUBDOMAIN_ALIAS_STUB, TUTOR_EMAIL_ADDRESS_STUB));
+        return new SubdomainEntity(subdomainId, SubdomainType.ORGANIZATION, subdomainUserAccessEntities);
+    }
 }
