@@ -34,4 +34,15 @@ public class GroupEntityStub {
                 .tutorEntity(TutorEntityStub.create())
                 .build();
     }
+
+    public static GroupEntity createWithId(String id) {
+        return GroupEntity.builder()
+                .id(id)
+                .name(GROUP_NAME_STUB)
+                .description(GROUP_DESCRIPTION_STUB)
+                .creationDateTime(LocalDateTime.now().minusMonths(1))
+                .subdomainEntity(SubdomainEntityStub.create())
+                .tutorEntity(TutorEntityStub.create())
+                .build();
+    }
 }
