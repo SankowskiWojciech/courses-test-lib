@@ -10,4 +10,8 @@ public class FileUserPermissionsEntityStub {
     public static FileUserPermissionsEntity create(String fileId, String userId, boolean canRead, boolean canModify, boolean canDelete) {
         return new FileUserPermissionsEntity(new FileUserPermissionsEntityId(fileId, userId), canRead, canModify, canDelete);
     }
+
+    public static FileUserPermissionsEntity createWithFullAccess(String fileId, String userId) {
+        return new FileUserPermissionsEntity(new FileUserPermissionsEntityId(fileId, userId), true, true, true);
+    }
 }
