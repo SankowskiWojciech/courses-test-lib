@@ -8,6 +8,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import static com.github.sankowskiwojciech.coursestestlib.DefaultTestValues.LESSON_DESCRIPTION_STUB;
 import static com.github.sankowskiwojciech.coursestestlib.DefaultTestValues.LESSON_TITLE_STUB;
@@ -31,6 +32,6 @@ public class GroupLessonEntityStub {
 
     public static GroupLessonEntity create() {
         final LocalDateTime currentDateTime = LocalDateTime.now().plusHours(1);
-        return new GroupLessonEntity(null, LESSON_TITLE_STUB, currentDateTime, currentDateTime.plusHours(3), LESSON_DESCRIPTION_STUB, currentDateTime, currentDateTime.plusMinutes(30), SubdomainEntityStub.create(), TutorEntityStub.create(), GroupEntityStub.create());
+        return new GroupLessonEntity(UUID.randomUUID().toString(), LESSON_TITLE_STUB, currentDateTime, currentDateTime.plusHours(3), LESSON_DESCRIPTION_STUB, currentDateTime, currentDateTime.plusMinutes(30), SubdomainEntityStub.create(), TutorEntityStub.create(), GroupEntityStub.create());
     }
 }
